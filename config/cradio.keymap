@@ -136,7 +136,7 @@
 // |  Z  |  X  |  C  |  D  |  V  | |  K  |  H  |  ,  |  .  |-NAV-|
 //                   |-SYM-| SPC | | RET |-NUM-|
                         bindings = <
-   &kp Q &kp W &kp F &kp P &kb B &kp J &kp L   &kp U     &kp Y   &kp SEMI
+   &kp Q &kp W &kp F &kp P &kp B &kp J &kp L   &kp U     &kp Y   &kp SEMI
    &kp A &kp R &kp S &kp T &kp G &kp M &kp N   &kp E     &kp I   &kp O
    &kp Z &kp X &kp C &kp D &kp V &kp K &kp H   &comma_qmark &dot_excl &sl NAV
                    &sl SYM &kp SPACE &kp RET &sl NUM
