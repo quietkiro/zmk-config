@@ -131,15 +131,15 @@
                 compatible = "zmk,keymap";
                 colemak_layer {
 // -----------------------------------------------------------------
-// |     |  W  |  F  |  P  |     | |     |  L  |  U  |  Y  |     |
+// |  Q  |  W  |  F  |  P  |  B  | |  J  |  L  |  U  |  Y  |  ;  |
 // |  A  |  R  |  S  |  T  |  G  | |  M  |  N  |  E  |  I  |  O  |
-// |  Z  |  X  |  C  |  D  |  B  | |  K  |  H  |  ,  |  .  |-NAV-|
-//                   |-SYM-| SPC | | SFT |-NUM-|
+// |  Z  |  X  |  C  |  D  |  V  | |  K  |  H  |  ,  |  .  |-NAV-|
+//                   |-SYM-| SPC | | RET |-NUM-|
                         bindings = <
-   &none &kp W &kp F &kp P &none &none &kp L   &kp U     &kp Y   &none
+   &kp Q &kp W &kp F &kp P &kb B &kp J &kp L   &kp U     &kp Y   &kp SEMI
    &kp A &kp R &kp S &kp T &kp G &kp M &kp N   &kp E     &kp I   &kp O
-   &kp Z &kp X &kp C &kp D &kp B &kp K &kp H   &comma_qmark &dot_excl &sl NAV
-                   &sl SYM &kp SPACE &kp LSFT &sl NUM
+   &kp Z &kp X &kp C &kp D &kp V &kp K &kp H   &comma_qmark &dot_excl &sl NAV
+                   &sl SYM &kp SPACE &kp RET &sl NUM
                         >;
                 };
                 symbol_layer {
@@ -147,12 +147,12 @@
 // |     |  {  |  *  |  }  |     | |     |  <  |  ^  |  >  |     |
 // |  \  |  (  |  :  |  )  |     | |     |  [  |  '  |  ]  |  `  |
 // | HYP |     |  ;  |  @  |     | |     |  #  |  "  |  &  |     |
-//                   |_SYM_|     | | SFT | ESC |
+//                   |_SYM_|     | | RET | ESC |
                         bindings = <
    &none  &kp LBRC &kp STAR &kp RBRC  &none &none &kp LT &kp CARET &kp GT &none
    &kp BSLH &kp LPAR &kp COLON &kp RPAR  &none &none &kp LBKT &kp SQT &kp RBKT &kp GRAVE
    &sk HYPER  &none   &kp SEMI  HOLD_EMAIL_AT  &none &none &kp HASH &kp DQT   &kp AMPS   &none
-                             &trans &kp SPACE &kp LSFT &kp ESC
+                             &trans &kp SPACE &kp RET &kp ESC
                         >;
                 };
                 number_layer {
@@ -160,12 +160,12 @@
 // |     |  4  |  5  |  6  |     | |     |  |  |  ~  |  *  |     |
 // |  .  |  1  |  2  |  3  |     | |     |  +  |  -  |  =  |  /  |
 // |  ,  |  7  |  8  |  9  |     | |     |  $ £|  _  |  %  |-FUN-|
-//                   |  0  | SPC | |     |_NUM_|
+//                   |  0  | SPC | | RET |_NUM_|
                         bindings = <
    &none  &kp N4 &kp N5 &kp N6 &none &none &kp PIPE &kp TILDE &kp STAR  &none
    &kp DOT &kp N1 &kp N2 &kp N3 &none &none &kp PLUS  &kp MINUS &kp EQUAL &kp FSLH
    &kp COMMA  &kp N7 &kp N8 &kp N9 &none &none HOLD_GBP_DOLLAR &kp UNDER  &kp PRCNT    &sl FUN
-                 &kp N0 &kp SPACE &kp LSFT  &trans
+                 &kp N0 &kp SPACE &kp RET  &trans
                         >;
                 };
                 nav_layer {
@@ -177,7 +177,7 @@
 // |     | W 4 | W 5 | W 6 |     | |     |A-CLK|VHINT| CLK |     |
 // |THROW| W 1 | W 2 | W 3 |     | | LFT | DWN | U P |RIGHT| DEL |
 // |NAVLK| W 7 | W 8 | W 9 |     | |     | S 1 | S 2 | S 3 |_NAV_|
-//                   |FOCUS| SPC | | SFT |SCRLL|
+//                   |FOCUS| SPC | | RET |SCRLL|
                         bindings = <
    &none &none &none &none &none &none    &none     &none     &none     &none 
    &none &none &none &none &none &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans  
