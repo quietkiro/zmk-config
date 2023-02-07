@@ -19,8 +19,8 @@ compatible = "zmk,combos";
 
 COMBO(caps_word, &caps_word, 6 7)
 COMBO(backspace, &kp BSPC, 7 8)
-COMBO(ctrl, &sk LCTL, 26 27)
-COMBO(enter, &sk LSHFT, 27 28)
+COMBO(ctrl, &sk LCTL, 21 22)
+COMBO(shift, &sk LSHFT, 27 28)
 COMBO(cmd, &sk LMETA, 30 31)
 COMBO(opt, &sk LALT, 32 33)
 COMBO(TAB, &kp TAB, 1 2)

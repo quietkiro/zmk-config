@@ -145,12 +145,12 @@
                 symbol_layer {
 // -----------------------------------------------------------------
 // |     |  {  |  *  |  }  |     | |     |  <  |  ^  |  >  |     |
-// |  \  |  (  |  :  |  )  |     | |     |  [  |  '  |  ]  |  `  |
+// |  \  |  [  |  :  |  ]  |     | |     |  (  |  '  |  )  |  `  |
 // | HYP |     |  ;  |  @  |     | |     |  #  |  "  |  &  |     |
 //                   |_SYM_|     | | RET | ESC |
                         bindings = <
    &none  &kp LBRC &kp STAR &kp RBRC  &none &none &kp LT &kp CARET &kp GT &none
-   &kp BSLH &kp LPAR &kp COLON &kp RPAR  &none &none &kp LBKT &kp SQT &kp RBKT &kp GRAVE
+   &kp BSLH &kp LBKT &kp COLON &kp RBKT  &none &none &kp LPAR &kp SQT &kp RPAR &kp GRAVE
    &sk HYPER  &none   &kp SEMI  HOLD_EMAIL_AT  &none &none &kp HASH &kp DQT   &kp AMPS   &none
                              &trans &kp SPACE &kp RET &kp ESC
                         >;
