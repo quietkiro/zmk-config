@@ -52,7 +52,7 @@
             tapping-term-ms = <1000>;
             quick-tap-ms = <0>;
             flavor = "balanced";
-            bindings = <&reset>, <&none>;
+            bindings = <&sys_reset>, <&none>;
         };
         hold_bt_clr: hold_bt_clr {
             compatible = "zmk,behavior-hold-tap";
