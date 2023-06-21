@@ -63,15 +63,6 @@
             flavor = "balanced";
             bindings = <&macro_bt_clr>, <&none>;
         };
-        hold_email_at: hold_email_at {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_EMAIL_AT";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&macro_email>, <&kp>;
-        };
         comma_qmark: comma_qmark {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_QMARK";
@@ -105,7 +96,6 @@
 #define HOLD_BOOTLOADER &hold_bootloader 0 0
 #define HOLD_RESET &hold_reset 0 0
 #define HOLD_BT_CLR &hold_bt_clr 0 0
-#define HOLD_EMAIL_AT &hold_email_at 0 AT
 
 /*           34 Keys
 ╭──────────────╮ ╭──────────────╮
@@ -141,7 +131,7 @@
                         bindings = <
    &none  &kp LBRC &kp STAR &kp RBRC  &none &none &kp LT &kp CARET &kp GT &none
    &kp BSLH &kp LBKT &kp COLON &kp RBKT  &none &none &kp LPAR &kp SQT &kp RPAR &kp GRAVE
-   &sk HYPER  &none   &kp SEMI  HOLD_EMAIL_AT  &none &none &kp HASH &kp DQT   &kp AMPS   &none
+   &sk HYPER  &none   &kp SEMI  &kp AT  &none &none &kp HASH &kp DQT   &kp AMPS   &none
                              &trans &kp SPACE &kp RET &kp ESC
                         >;
                 };
