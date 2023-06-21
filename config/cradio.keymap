@@ -63,23 +63,14 @@
             flavor = "balanced";
             bindings = <&macro_bt_clr>, <&none>;
         };
-        hold_email_at: hold_email_at {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_EMAIL_AT";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&macro_email>, <&kp>;
-        };
-        hold_gbp_dollar: hold_gbp_dollar {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_GBP_DOLLAR";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
+        hold_pr: hold_pr {
+          compatible = "zmk,behavior-hold-tap";
+          label = "HOLD_PR";
+          #binding-cells = <2>;
+          tapping-term-ms = <100>;
+          quick-tap-ms = <0>;
+          flavor = "balanced";
+          bindings = <&macro_pr>, <&none>;
         };
         comma_qmark: comma_qmark {
             compatible = "zmk,behavior-mod-morph";
@@ -97,25 +88,44 @@
         };
     };
     macros {
-        ZMK_MACRO(macro_email,
-        wait-ms = <30>;
-        tap-ms = <40>;
-        bindings = <&kp R &kp U &kp I &kp D &kp A>
-                   , <&kp AT>
-                   , <&kp D &kp I &kp N &kp G &kp A &kp N &kp S &kp I>
-                   , <&kp DOT &kp C &kp H>;)
-        ZMK_MACRO(macro_bt_clr,
-        wait-ms = <30>;
-        tap-ms = <40>;
-        bindings = <&bt BT_CLR>;)
+        ZMK_MACRO(
+            macro_bt_clr,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&bt BT_CLR>;
+        )
+        ZMK_MACRO(
+            macro_pr,
+            wait-ms = <50>;
+            tap-ms = <40>;
+            bindings = <&macro_press &LSHFT>
+                    , <&macro_press &LCTRL>
+                    , <&kp UP>
+                    , <&macro_release &LCTRL>
+                    , <&macro_release &LSHFT>
+                    , <&macro_press &LCTRL>
+                    , <&kp C>
+                    , <&macro_release &LCTRL>
+                    , <&kp RIGHT>
+                    , <&kp ENTER>
+                    , <&macro_press LCTRL>
+                    , <&macro_press LALT>
+                    , <&kp V>
+                    , <&macro_release LALT>
+                    , <&macro_release LCTRL>
+                    , <&macro_press LCTRL>
+                    , <&macro_press LSHFT>
+                    , <&kp V>
+                    , <&macro_release LSHFT>
+                    , <&macro_release LCTRL>;
+        )
     };
 };
 
 #define HOLD_BOOTLOADER &hold_bootloader 0 0
 #define HOLD_RESET &hold_reset 0 0
 #define HOLD_BT_CLR &hold_bt_clr 0 0
-#define HOLD_EMAIL_AT &hold_email_at 0 AT
-#define HOLD_GBP_DOLLAR &hold_gbp_dollar LA(N3) DOLLAR
+#define HOLD_PR &hold_pr 0 0
 
 /*           34 Keys
 ╭──────────────╮ ╭──────────────╮
@@ -144,14 +154,14 @@
                 };
                 symbol_layer {
 // -----------------------------------------------------------------
-// |     |  {  |  *  |  }  |     | |     |  <  |  ^  |  >  |     |
+// |     |  {  |  *  |  }  |  PR | |     |  <  |  ^  |  >  |     |
 // |  \  |  [  |  :  |  ]  |     | |     |  (  |  '  |  )  |  `  |
 // | HYP |     |  ;  |  @  |     | |     |  #  |  "  |  &  |     |
-//                   |_SYM_|     | | RET | ESC |
+//                   |_SYM_| SPC | | RET | ESC |
                         bindings = <
-   &none  &kp LBRC &kp STAR &kp RBRC  &none &none &kp LT &kp CARET &kp GT &none
+   &none  &kp LBRC &kp STAR &kp RBRC  HOLD_PR &none &kp LT &kp CARET &kp GT &none
    &kp BSLH &kp LBKT &kp COLON &kp RBKT  &none &none &kp LPAR &kp SQT &kp RPAR &kp GRAVE
-   &sk HYPER  &none   &kp SEMI  HOLD_EMAIL_AT  &none &none &kp HASH &kp DQT   &kp AMPS   &none
+   &sk HYPER  &none   &kp SEMI  &kp AT  &none &none &kp HASH &kp DQT   &kp AMPS   &none
                              &trans &kp SPACE &kp RET &kp ESC
                         >;
                 };
@@ -164,8 +174,8 @@
                         bindings = <
    &none  &kp N4 &kp N5 &kp N6 &none &none &kp PIPE &kp TILDE &kp STAR  &none
    &kp DOT &kp N1 &kp N2 &kp N3 &none &none &kp PLUS  &kp MINUS &kp EQUAL &kp FSLH
-   &kp COMMA  &kp N7 &kp N8 &kp N9 &none &none HOLD_GBP_DOLLAR &kp UNDER  &kp PRCNT    &sl FUN
-                 &kp N0 &kp SPACE &kp RET  &trans
+   &kp COMMA  &kp N7 &kp N8 &kp N9 &none &none &kp DOLLAR &kp UNDER  &kp PRCNT    &sl FUN
+                 &kp N0 &trans &kp RET  &trans
                         >;
                 };
                 nav_layer {
