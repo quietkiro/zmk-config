@@ -88,13 +88,11 @@
         };
     };
     macros {
-        ZMK_MACRO(
-        macro_bt_clr,
+        ZMK_MACRO(macro_bt_clr,
         wait-ms = <30>;
         tap-ms = <40>;
         bindings = <&bt BT_CLR>;)
-        ZMK_MACRO(
-        macro_pr,
+        ZMK_MACRO(macro_pr,
         wait-ms = <50>;
         tap-ms = <40>;
         bindings = <&macro_press &LSHFT>
