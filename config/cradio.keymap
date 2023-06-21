@@ -72,15 +72,6 @@
             flavor = "balanced";
             bindings = <&macro_email>, <&kp>;
         };
-        hold_gbp_dollar: hold_gbp_dollar {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_GBP_DOLLAR";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
         comma_qmark: comma_qmark {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_QMARK";
@@ -115,7 +106,6 @@
 #define HOLD_RESET &hold_reset 0 0
 #define HOLD_BT_CLR &hold_bt_clr 0 0
 #define HOLD_EMAIL_AT &hold_email_at 0 AT
-#define HOLD_GBP_DOLLAR &hold_gbp_dollar LA(N3) DOLLAR
 
 /*           34 Keys
 ╭──────────────╮ ╭──────────────╮
@@ -159,12 +149,12 @@
 // -----------------------------------------------------------------
 // |     |  4  |  5  |  6  |     | |     |  |  |  ~  |  *  |     |
 // |  .  |  1  |  2  |  3  |     | |     |  +  |  -  |  =  |  /  |
-// |  ,  |  7  |  8  |  9  |     | |     |  $ £|  _  |  %  |-FUN-|
+// |  ,  |  7  |  8  |  9  |     | |     |  $  |  _  |  %  |-FUN-|
 //                   |  0  | SPC | | RET |_NUM_|
                         bindings = <
    &none  &kp N4 &kp N5 &kp N6 &none &none &kp PIPE &kp TILDE &kp STAR  &none
    &kp DOT &kp N1 &kp N2 &kp N3 &none &none &kp PLUS  &kp MINUS &kp EQUAL &kp FSLH
-   &kp COMMA  &kp N7 &kp N8 &kp N9 &none &none HOLD_GBP_DOLLAR &kp UNDER  &kp PRCNT    &sl FUN
+   &kp COMMA  &kp N7 &kp N8 &kp N9 &none &none &kp DOLLAR &kp UNDER  &kp PRCNT    &sl FUN
                  &kp N0 &kp SPACE &kp RET  &trans
                         >;
                 };
