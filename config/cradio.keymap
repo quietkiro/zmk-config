@@ -89,7 +89,7 @@
                     , <&kp C>
                     , <&macro_release &kp LCTRL>;
         )
-        ZMK_MACRO(macro_copy,
+        ZMK_MACRO(macro_paste,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&macro_press &kp LCTRL>
