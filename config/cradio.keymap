@@ -113,7 +113,6 @@
         //             , <&macro_release &kp LSHFT>
         //             , <&macro_release &kp LCTRL>;
         // )
-        )
     };
 };
 
