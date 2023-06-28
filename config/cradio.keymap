@@ -81,30 +81,30 @@
         wait-ms = <30>;
         tap-ms = <40>;
         bindings = <&bt BT_CLR>;)
-        ZMK_MACRO(macro_pr,
-            wait-ms = <50>;
-            tap-ms = <40>;
-            bindings = <&macro_press &LSHFT>
-                    , <&macro_press &LCTRL>
-                    , <&kp UP>
-                    , <&macro_release &LCTRL>
-                    , <&macro_release &LSHFT>
-                    , <&macro_press &LCTRL>
-                    , <&kp C>
-                    , <&macro_release &LCTRL>
-                    , <&kp RIGHT>
-                    , <&kp ENTER>
-                    , <&macro_press LCTRL>
-                    , <&macro_press LALT>
-                    , <&kp V>
-                    , <&macro_release LALT>
-                    , <&macro_release LCTRL>
-                    , <&macro_press LCTRL>
-                    , <&macro_press LSHFT>
-                    , <&kp V>
-                    , <&macro_release LSHFT>
-                    , <&macro_release LCTRL>;
-        )
+        // ZMK_MACRO(macro_pr,
+        //     wait-ms = <50>;
+        //     tap-ms = <40>;
+        //     bindings = <&macro_press &LSHFT>
+        //             , <&macro_press &LCTRL>
+        //             , <&kp UP>
+        //             , <&macro_release &LCTRL>
+        //             , <&macro_release &LSHFT>
+        //             , <&macro_press &LCTRL>
+        //             , <&kp C>
+        //             , <&macro_release &LCTRL>
+        //             , <&kp RIGHT>
+        //             , <&kp ENTER>
+        //             , <&macro_press LCTRL>
+        //             , <&macro_press LALT>
+        //             , <&kp V>
+        //             , <&macro_release LALT>
+        //             , <&macro_release LCTRL>
+        //             , <&macro_press LCTRL>
+        //             , <&macro_press LSHFT>
+        //             , <&kp V>
+        //             , <&macro_release LSHFT>
+        //             , <&macro_release LCTRL>;
+        // )
     };
 };
 
