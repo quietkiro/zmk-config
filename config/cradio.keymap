@@ -213,10 +213,10 @@
         };
         nav_layer {
 // -----------------------------------------------------------------
-// |     | W 4 | W 5 | W 6 |     | |     |A-CLK|VHINT| CLK |     |
-// |THROW| W 1 | W 2 | W 3 |     | | LFT | DWN | U P |RIGHT| DEL |
-// |NAVLK| W 7 | W 8 | W 9 |     | |     | S 1 | S 2 | S 3 |_NAV_|
-//                   |FOCUS| SPC | | RET |SCRLL|
+// |     |     |     |     |     | |     |     |     |     |     |
+// |     |     |     |     |     | | LFT | DWN | UP  |RIGHT| DEL |
+// |NAVLK|     |     |     |     | |     |     |     |     |_NAV_|
+//                   |     | SPC | | RET |SCRLL|
                         bindings = <
    &none &none &none &none &none &none    &none     &none     &none     &none 
    &none &none &none &none &none &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans  
