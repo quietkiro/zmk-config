@@ -87,71 +87,61 @@
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&macro_press &kp LCTRL>
-                    , <&kp C>
+                    , <&macro_tap &kp C>
                     , <&macro_release &kp LCTRL>;
         )
         ZMK_MACRO(m_paste,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&macro_press &kp LCTRL>
-                    , <&kp V>
+                    , <&macro_tap &kp V>
                     , <&macro_release &kp LCTRL>;
         )
         ZMK_MACRO(m_cut,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&macro_press &kp LCTRL>
-                    , <&kp X>
+                    , <&macro_tap &kp X>
                     , <&macro_release &kp LCTRL>;
         )
         ZMK_MACRO(m_undo,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&macro_press &kp LCTRL>
-                    , <&kp Z>
+                    , <&macro_tap &kp Z>
                     , <&macro_release &kp LCTRL>;
         )
         ZMK_MACRO(m_cformat,
             wait-ms = <30>;
             tap-ms = <40>;
-            bindings = <&macro_press &kp LCTRL>
-                    , <&macro_press &kp LALT>
-                    , <&kp C>
-                    , <&macro_release &kp LALT>
-                    , <&macro_release &kp LCTRL>;
+            bindings = <&macro_press &kp LCTRL &kp LALT>
+                    , <&macro_tap &kp C>
+                    , <&macro_release &kp LALT &kp LCTRL>;
         )
         ZMK_MACRO(m_pformat,
             wait-ms = <30>;
             tap-ms = <40>;
-            bindings = <&macro_press &kp LCTRL>
-                    , <&macro_press &kp LALT>
-                    , <&kp V>
-                    , <&macro_release &kp LALT>
-                    , <&macro_release &kp LCTRL>;
+            bindings = <&macro_press &kp LCTRL &kp LALT>
+                    , <&macro_tap &kp V>
+                    , <&macro_release &kp LALT &kp LCTRL>;
         )
         ZMK_MACRO(m_pr,
-            wait-ms = <50>;
+            wait-ms = <150>;
             tap-ms = <40>;
-            bindings = <&macro_press &kp LSHFT>
+            bindings = <&macro_press &kp LCTRL &kp LSHFT>
+                    , <&macro_tap &kp UP>
+                    , <&macro_release &kp LSHFT &kp LCTRL>
                     , <&macro_press &kp LCTRL>
-                    , <&kp UP>
+                    , <&macro_tap &kp C>
                     , <&macro_release &kp LCTRL>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_press &kp LCTRL>
-                    , <&kp C>
-                    , <&macro_release &kp LCTRL>
-                    , <&kp RIGHT>
-                    , <&kp ENTER>
-                    , <&macro_press &kp LCTRL>
-                    , <&macro_press &kp LALT>
-                    , <&kp V>
-                    , <&macro_release &kp LALT>
-                    , <&macro_release &kp LCTRL>
-                    , <&macro_press &kp LCTRL>
-                    , <&macro_press &kp LSHFT>
-                    , <&kp V>
-                    , <&macro_release &kp LSHFT>
-                    , <&macro_release &kp LCTRL>;
+                    , <&macro_tap &kp RIGHT>
+                    , <&macro_tap &kp ENTER>
+                    , <&macro_press &kp LCTRL &kp LALT>
+                    , <&macro_tap &kp V>
+                    , <&macro_release &kp LALT &kp LCTRL>
+                    , <&macro_press &kp LCTRL &kp LSHFT>
+                    , <&macro_tap &kp V>
+                    , <&macro_release &kp LSHFT &kp LCTRL>;
         )
     };
 };
@@ -226,7 +216,7 @@
         };
         fun_layer {
 // -----------------------------------------------------------------
-// |     | F 4 | F 5 | F 6 |     | |     | BT0 | BT1 | BT2 |     |
+// |     | F 4 | F 5 | F 6 |     | | BT0 | BT1 | BT2 | BT3 | BT4 |
 // | F11 | F 1 | F 2 | F 3 |FLASH| |FLASH|VMUTE|VOLDN|VOLUP|POWER|
 // | F12 | F 7 | F 8 | F 9 |RESET| |RESET|BTCLR|BRIDN|BRIUP|_FUN_|
 //                   | F10 | SPC | | SFT |_NUM_|
